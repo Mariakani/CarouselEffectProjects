@@ -11,10 +11,15 @@ import UIKit
 class InterestViewController: UIViewController {
 
     @IBOutlet weak var CollectionView: UICollectionView!
+    @IBOutlet weak var profileImageView: UIImageView!
+    
     var interests = Interest.createInterests()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        profileImageView.layer.cornerRadius = profileImageView.frame.height/2
+        profileImageView.layer.borderColor = UIColor.black.cgColor
+        profileImageView.layer.masksToBounds = true
         CollectionView.dataSource = self
     }
 
@@ -22,7 +27,7 @@ class InterestViewController: UIViewController {
 
 extension InterestViewController: UICollectionViewDataSource{
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-    return 1
+    return 4
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
@@ -33,6 +38,7 @@ extension InterestViewController: UICollectionViewDataSource{
         let cell = CollectionView.dequeueReusableCell(withReuseIdentifier: "interestCell", for: indexPath) as! InterestCollectionViewCell
         let interest = interests[indexPath.item]
         cell .interest = interest
+        //cell.backgroundColor = .purple
         return cell
     }
     
