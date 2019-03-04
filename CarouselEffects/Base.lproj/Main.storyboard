@@ -48,6 +48,9 @@
                                 <state key="normal" title="Discover">
                                     <color key="titleColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="discoverDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3YS-G1-d0F"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cL1-KX-M0F">
                                 <rect key="frame" x="305" y="810" width="93" height="36"/>
@@ -55,6 +58,9 @@
                                 <state key="normal" title="Edit Profile">
                                     <color key="titleColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="editProfileDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ogx-Ow-G8f"/>
+                                </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="maJ-MZ-ZGv">
                                 <rect key="frame" x="16" y="146" width="382" height="648"/>
