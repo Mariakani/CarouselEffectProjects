@@ -22,12 +22,18 @@ class InterestViewController: UIViewController {
         profileImageView.layer.masksToBounds = true
         CollectionView.dataSource = self
     }
-
+    //MARK-- Implement this functions
+    @IBAction func editProfileDidTapped(_ sender: Any) {
+         print("edit your profile")
+    }
+    @IBAction func discoverDidTapped(_ sender: Any) {
+        print("discover your interest")
+    }
 }
-
+//MARK-- Implement the uicollectionviewDelegate protocols
 extension InterestViewController: UICollectionViewDataSource{
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-    return 4
+    return 3
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
